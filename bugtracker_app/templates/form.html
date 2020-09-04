@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bug Zapper Ticket System</title>
+</head>
+
+<h1><a href="/">HOME</a></h1>
+<h1><a href="{% url 'logout' %}">LOGOUT</a></h1>
+<title> Bug Tracker </title>
+<div align="center">
+    {% block content %}
+
+        <div class="container">
+            <h1>Submit a Ticket</h1>
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+                <input value="submit" type="submit">
+            </form>
+        </div>
+    {% endblock %}
+    <div>
+
+
+
+

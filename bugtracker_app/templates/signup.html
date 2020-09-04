@@ -1,10 +1,20 @@
-{% block title %}Login{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bug Zapper Ticket System</title>
+</head>
+<body>
+    <body align="center">
+    <h1> Sign Up </h1>
+    <form action="{% url 'signup' %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p}}
+    <input type="submit" value="Sign Up">
+    <p><a href="{% url 'login' %}">Already have an account?</a></p>
+    </form>
+  </body>
+</body>
+</html>
 
-{% block content %}
-<h2>Login</h2>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Login</button>
-</form>
-{% endblock %}
+<

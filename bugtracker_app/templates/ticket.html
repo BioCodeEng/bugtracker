@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Bug Zapper System</title>
+  </head>
+  <body>
+    <h1><a href="/">HOME</a></h1>
+    <h1><a href="{% url 'logout' %}">LOGOUT</a></h1>
+    <div align="center">
+        <h2>{{ticketinfo.title}}</h2>
+        <p>Description: {{ticketinfo.description}}</p>
+        <p>Ticket Status: {{ticketinfo.get_status_display}}</p>
+        <p>Reported by: <a href="/filerinfo/{{ticketinfo.ticketfiler.id}}">{{ticketinfo.ticketfiler}}</a></p>
+        <p>Date Submitted: {{ticketinfo.datetime}}</p>
+        <p>Assigned To: {{ticketinfo.assignedto}}</p>
+        {%if ticketinfo.status != "D" and ticketinfo.status != "INV" and ticketinfo.status != "N"%}
+            <p>Being worked on by: <a href="/filerinfo/{{ticketinfo.assignedto.id}}">{{ticketinfo.assignedto}}</a></p>
+            <a href="/ticketcomplete/{{ticketinfo.id}}/complete/{{user.id}}">Complete Ticket</a> <br>
+            <a href="/ticketinvalid/{{ticketinfo.id}}/invalid/{{user.id}}">Mark Invalid</a> <br>
+            <a href="/ticketedit/{{ticketinfo.id}}/edit/">Edit Ticket</a> <br>
+        {%endif%}
+        {%if "INV" not in ticketinfo.status and "N" not in ticketinfo.status and "INP" not in ticketinfo.status%} {
+            <p>Fixed by: <a href="/filerinfo/{{ticketinfo.completedby.id}}">{{ticketinfo.completedby}}</a></p>
+            <a href="/ticketedit/{{ticketinfo.id}}/edit/">Edit Ticket</a> <br>
+            <a href="/ticketinvalid/{{ticketinfo.id}}/invalid/{{user.id}}">Mark Invalid</a> <br>
+        {%endif%}
+        {%if not ticketinfo.assignedto and not ticketinfo.completedby and "INV" not in ticketinfo.status%}
+            <a href="/ticketassignment/{{ticketinfo.id}}/inprogress/{{user.id}}">Assign It To Yourself</a> <br>
+            <a href="/ticketedit/{{ticketinfo.id}}/edit/">Edit Ticket</a> <br>
+            <a href="/ticketcomplete/{{ticketinfo.id}}/complete/{{user.id}}">Complete Ticket</a> <br>
+            <a href="/ticketinvalid/{{ticketinfo.id}}/invalid/{{user.id}}">Mark Invalid</a> <br>
+        {%endif%}
+        {%if ticketinfo.status != "D" and ticketinfo.status != "N" and ticketinfo.status != "INP"%}
+            <a href="/ticketedit/{{ticketinfo.id}}/edit/">Edit Ticket</a> <br>
+        {%endif%}
+    </div>
+  </body>
+</html>
+

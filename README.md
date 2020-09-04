@@ -14,7 +14,7 @@ Coding Plan: (So far)
         c. user_detail
 
 
-
+    My apologies for not getting this done sooner, I've ran into tech issues beyond my control and have done this 3 or 4 times, I'm not even kidding.
 
 Sources for assistance in understanding concepts: Sources will be referenced for example with [R1]
 
@@ -43,7 +43,12 @@ Previous Assesssments that taught concepts:
 
  [R5] Django CRUD Web Application <https://medium.com/@john.bagiliko/django-crud-web-application-77ef05af1f00>
 
-
+ [R6] Working with Django Templates & Static Files <https://scotch.io/tutorials/working-with-django-templates-static-files>
+        
+      Tutorial over static files, templates, partials, base extension and navbar
+      
+      {% include 'partials/nav-bar.html' %}
+      {% url 'data' %}
 
 
 

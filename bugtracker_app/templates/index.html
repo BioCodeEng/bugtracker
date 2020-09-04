@@ -1,0 +1,81 @@
+<!-- templates/index.html>
+<1-- navbar -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1><a href="/">HOME</a></h1>
+<h1><a href="{% url 'logout' %}">Logout</a></h1>
+<title> Bug Zapper Home </title>
+
+<div align="center">
+    <div align="right">
+    <h2>Total tickets: {{Total_count}}</h2>
+    <h2>New tickets: {{N_count}}</h2>
+    <h2>In progress tickets: {{InP_count}}</h2>
+    <h2>Completed tickets: {{D_count}}</h2>
+    <h2>Invalid tickets: {{InV_count}}</h2>
+    </div>
+
+    <h1><p><a href="{% url 'createticket' %}">SUBMIT TICKET</a></p></h1>
+
+    <div align="center">
+        {% for ticket in data %}
+            {%if "N" in ticket.status%}
+                <h2>New Tickets</h2>
+                <p>Title: <a href="/ticketinfo/{{ticket.id}}/">{{ticket.title}}</a></p>
+                <p>Ticket Id: {{ticket.id}}</p>
+                <p>Reported By: <a href="filerinfo/{{ticket.ticketfiler.id}}">{{ticket.ticketfiler}}</a></p>
+                <p>Date Submitted: {{ticket.datetime}}</p>
+    </div>
+    {%endif%}
+    {%endfor%}
+
+
+    <div align="center">
+        {% for ticket in data %}
+            {%if "INP" in ticket.status%}
+                <h2>Ticket In Progress</h2>
+                <p>Title: <a href="/ticketinfo/{{ticket.id}}/">{{ticket.title}}</a></p>
+                <p>Ticket Id: {{ticket.id}}</p>
+                <p>Reported By: <a href="filerinfo/{{ticket.ticketfiler.id}}">{{ticket.ticketfiler}}</a></p>
+                <p>Date Submitted: {{ticket.datetime}}</p>
+    </div>
+    {%endif%}
+    {%endfor%}
+
+
+    <div align="center">
+        {% for ticket in data %}
+            {%if "D" in ticket.status%}
+                <h2>Completed Ticket</h2>
+                <p>Title: <a href="/ticketinfo/{{ticket.id}}/">{{ticket.title}}</a></p>
+                <p>Ticket Id: {{ticket.id}}</p>
+                <p>Reported By: <a href="filerinfo/{{ticket.ticketfiler.id}}">{{ticket.ticketfiler}}</a></p>
+                <p>Date Submitted: {{ticket.datetime}}</p>
+    </div>
+    {%endif%}
+    {%endfor%}
+
+
+    <div align="center">
+        {% for ticket in data %}
+            {%if "INV" in ticket.status%}
+                <h2>Invalid Ticket</h2>
+                <p>Title: <a href="/ticketinfo/{{ticket.id}}/">{{ticket.title}}</a></p>
+                <p>Ticket Id: {{ticket.id}}</p>
+                <p>Reported By: <a href="filerinfo/{{ticket.ticketfiler.id}}">{{ticket.ticketfiler}}</a></p>
+                <p>Date Submitted: {{ticket.datetime}}</p>
+    </div>
+    {%endif%}
+    {%endfor%}
+
+</div>
+
+</body>
+</html>
+
