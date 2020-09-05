@@ -5,7 +5,14 @@ Author: Ally Engle
 
 Assessment: Bug Tracker
 
-Academic Integrity Reminder: 
+Academic Integrity Reminder: To give proper citation, this is taken from "Avoiding Plagiarism: Academic Integrity @ Butler <https://libguides.butler.edu/c.php?g=34302&p=218280>", should you want to give the full article a read. It's on Butler's Academic Integrity Policy, which Kenzie is partnered with.
+
+
+    Cheating includes receiving or giving help on papers, experiments, reports, compositions, projects or examinations without the instructor's permission. It also includes submitting part of or all of the completed assignment of another student as one's own work. Of special note and concern is the use of purchased research papers. It is a violation of the regulations of Butler University for a student to purchase a term paper. Cheating is also using unauthorized materials and aids, such as books, one's own notes or those of another and calculators during an examination.
+
+    Plagiarism is the fraudulent misrepresentation of any part of another person's work as one's own. Submitting any writing, including take-home exams, that does not properly acknowledge the quoting or paraphrasing of another person's words, or that fails to give proper credit for another person's ideas, opinion, or theory is plagiarism. Any unacknowledged use of sources to which one is indebted including but not limited to, music, video, audio, theatre projects, compositions, website and computer software constitutes plagiarism.
+    
+(I already cite heavily to comply with the cheating and plagiarism sections. However, this specfic assessment just took from 8/26-9/4 to get done, not because I was plagiarising but because of Academic interference issues that were preventing me from getting my assesment done. Also, on the continued issue with cloning, it wasn't a problem from about 8/24 until 9/2 and then it started to kick up again when I released the first part of bugtracker, which is literally just the whole of custom user model, which I used a tutorial for to get through, so I'm curious why it's suddenly an issue again and why both have 14+ unique clones? Please see the following 2 paragraphs and facilitation of Academic Dishonesty and Academic Interference.)
     
     Plagiarism is the fraudulent misrepresentation of any part of another person's work as one's own. Submitting any writing, including take-home exams, that         does not properly acknowledge the quoting or paraphrasing of another person's words, or that fails to give proper credit for another person's ideas, opinion,     or theory is plagiarism. Any unacknowledged use of sources to which one is indebted including but not limited to, music, video, audio, theatre projects,         compositions, website and computer software constitutes plagiarism.    
     
