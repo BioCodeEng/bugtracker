@@ -5,13 +5,18 @@ Author: Ally Engle
 
 Assessment: Bug Tracker
 
+Academic Integrity Reminder: 
+    
+    Plagiarism is the fraudulent misrepresentation of any part of another person's work as one's own. Submitting any writing, including take-home exams, that         does not properly acknowledge the quoting or paraphrasing of another person's words, or that fails to give proper credit for another person's ideas, opinion,     or theory is plagiarism. Any unacknowledged use of sources to which one is indebted including but not limited to, music, video, audio, theatre projects,         compositions, website and computer software constitutes plagiarism.    
+    
+    Facilitating Academic Dishonesty involves assisting someone in an act of dishonesty.
+
+    Interference includes the theft, alteration, destruction or obstruction of another student's work. Interference may take the form of the theft, defacements       or destruction of resources, e.g., library periodicals and books, so as to deprive other students of information.
+
 Coding Plan: (So far)
 
-    1. Custom User Model/Authentication
-    2. Bug tracker
-        a. CRUD
-        b. ticket_detail
-        c. user_detail
+    1. Custom User Model/Authentication-completed
+    2. Bug tracker-completed 9/4/2020
 
 
     My apologies for not getting this done sooner, I've ran into tech issues beyond my control and have done this 3 or 4 times, I'm not even kidding.
